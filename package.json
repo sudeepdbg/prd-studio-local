@@ -1,0 +1,56 @@
+{
+  "name": "prd-studio-local",
+  "version": "1.0.0",
+  "description": "Turn any PRD into a structured document, an editable click-through prototype, and a Jira backlog — running entirely on your own machine with a local LLM. No data leaves your computer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Sudeep (https://github.com/sudkumar)",
+  "homepage": "https://github.com/sudkumar/prd-studio-local#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudkumar/prd-studio-local.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sudkumar/prd-studio-local/issues"
+  },
+  "keywords": [
+    "prd",
+    "product-requirements",
+    "product-management",
+    "jira",
+    "llm",
+    "ollama",
+    "local-first",
+    "offline",
+    "ai",
+    "prototype",
+    "react",
+    "vite",
+    "self-hosted",
+    "privacy"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node server/index.js\" \"vite\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/index.js",
+    "test": "node --test server/*.test.js src/store.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "lucide-react": "^0.383.0",
+    "mammoth": "^1.8.0",
+    "pdfjs-dist": "^4.4.168",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "vite": "^5.4.0"
+  }
+}
